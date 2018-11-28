@@ -4,8 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "kafka-node": "^3.0.1",
+    "koa": "^2.5.3",
+    "koa-body": "^4.0.4",
+    "koa-router": "^7.4.0",
+    "mongoose": "^5.3.4",
+    "mongoose-unique-validator": "^2.0.2",
+    "tg-chan-kafka": "^1.0.8"
+  }
 }
