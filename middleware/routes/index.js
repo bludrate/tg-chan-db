@@ -37,25 +37,21 @@ router.get('/post', async( ctx, next ) => {
 router.get('/channelWithPosts/:channelUsername', async ( ctx, next ) => {
   const channel = await dbApi.getChannelWithPosts( ctx.params.channelUsername );
 
-  console.log(channel);
-
   if ( !channel ) {
     return ctx.status(404);
   }
 
-  ctx.body(channel);
+  ctx.body = channel;
 });
 
 router.get('/channelWithPosts/:channelUsername/:postIndex', async ( ctx, next ) => {
   const channel = await dbApi.getChannelWithPosts( ctx.params.channelUsername, ctx.params.postIndex );
 
-  console.log(channel);
-
   if ( !channel ) {
     return ctx.status(404);
   }
 
-  ctx.body(channel);
+  ctx.body = channel;
 } );
 
 function routes () { return router.routes() }
