@@ -38,7 +38,7 @@ router.get('/channelWithPosts/:channelUsername', async ( ctx, next ) => {
   const channel = await dbApi.getChannelWithPosts( ctx.params.channelUsername );
 
   if ( !channel ) {
-    return ctx.status(404);
+    return ctx.status = 404;
   }
 
   ctx.body = channel;
@@ -48,7 +48,7 @@ router.get('/channelWithPosts/:channelUsername/:postIndex', async ( ctx, next ) 
   const channel = await dbApi.getChannelWithPosts( ctx.params.channelUsername, ctx.params.postIndex );
 
   if ( !channel ) {
-    return ctx.status(404);
+    return ctx.status = 404;
   }
 
   ctx.body = channel;
