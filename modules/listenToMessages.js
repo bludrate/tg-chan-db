@@ -24,6 +24,7 @@ module.exports = () => {
     const producer = await kafkaClient.producer;
 
     kafkaClient.subscribe( topics, ( message ) => {
+      console.log(message);
       const data = JSON.parse(message.value);
 
       switch ( message.topic ) {
